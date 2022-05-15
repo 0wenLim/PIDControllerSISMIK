@@ -37,7 +37,7 @@ void loop() {
   //currentOutput = (2*powf(a,2)-20)/(powf(a,2)+7*a+10)*prevOutput - (powf(a,2)-7*a+10)/(powf(a,2)+7*a+10)*prev2Output + 0.75/(powf(a,2)+7*a+10)*currentCtrl + 1.5/(powf(a,2)+7*a+10)*prevCtrl + 0.75/(powf(a,2)+7*a+10)*prev2Ctrl;
 
   //rumus plant kecepatan
-  currentOutput = (1.0/(5.0+a))*(0.9*currentCtrl + 0.9*prevCtrl - (5.0-a)*prevOutput);
+  currentOutput = (1.0/(5.0+a))*((0.9*currentCtrl) + (0.9*prevCtrl) - ((5.0-a)*prevOutput));
 
   //output sistem dikirim ke serial monitor dan controller
   Serial.println(currentOutput);
