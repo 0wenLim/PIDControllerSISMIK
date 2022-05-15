@@ -1,5 +1,4 @@
 int input = 0;
-int i = 0;
 
 String bacaan;
 
@@ -35,7 +34,7 @@ void loop() {
   currentCtrl = (1/a)*((a*Kp+Ki+pow(a,2)*Kd)*currentErr + 2*(Ki-pow(a,2)*Kd)*prevErr + (pow(a,2)*Kd-a*Kp+Ki)*prev2Err + a*prev2Ctrl) ;
   
   //kendali posisi
-//  currentOutput = (2*pow(a,2)-20)/(pow(a,2)+7*a+10)*prevOutput - (pow(a,2)-7*a+10)/(pow(a,2)+7*a+10)*prev2Output + 0.75/(pow(a,2)+7*a+10)*currentCtrl + 1.5/(pow(a,2)+7*a+10)*prevCtrl + 0.75/(pow(a,2)+7*a+10)*prev2Ctrl;
+  //currentOutput = (2*pow(a,2)-20)/(pow(a,2)+7*a+10)*prevOutput - (pow(a,2)-7*a+10)/(pow(a,2)+7*a+10)*prev2Output + 0.75/(pow(a,2)+7*a+10)*currentCtrl + 1.5/(pow(a,2)+7*a+10)*prevCtrl + 0.75/(pow(a,2)+7*a+10)*prev2Ctrl;
 
   //kendali kecepatan
   currentOutput = (1/(5+a))*(0.9*currentCtrl + 0.9*prevCtrl - (5-a)*prevOutput);
