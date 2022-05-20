@@ -1,4 +1,4 @@
-//kode untuk bagian controller + input target dan variabel kendali
+//kode untuk bagian plant dan output sistem 
 //include library
 #include <SoftwareSerial.h>
 #include <math.h>
